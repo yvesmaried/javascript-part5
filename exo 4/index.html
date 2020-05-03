@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img src="assets/img/Ryan_cox_henninger_turm.JPG" id="ryanImg" alt="le cox master" title="ryan cox">
+
+    <script>
+        let idRyan = document.getElementById("ryanImg");
+
+        ryanImg.addEventListener("Click", changeImg);
+        console.log(ryanImg.getAtrribute)
+
+        function changeImg() {
+            if (idRyan.src.match("Ryan_cox_henninger_turm.JPG")) { 
+                idRyan.src = "img/panda_roux_1504.jpg";
+            } else {
+                idRyan.src = "Ryan_cox_henninger_turm.JPG";
+            }
+        }
+        ryanImg.setAttribute("src", "img/panda_roux_1504.jpg");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.mdpt{
+    border: solid 2px green;
+    }
+    .mdpf {
+        border: solid 2px red;
+    }
+    
+    .error {
+        color: red;
+        padding: 10px;
+    }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo 6</title>
+</head>
+
+<body>
+
+    <form action="">
+        <p><label for="passwordnb1">Mot de passe :</label>
+            <input type="password" id="passwordnb1" name="pass" onclick="focus()" placeholder="Votre mot de passe"
+                required />
+        </p>
+        <p><label for="passwordnb2">Confirmation mot de passe :</label>
+            <input type="password" id="passwordnb2" name="confirm_pass" onclick="focus2()"
+                placeholder="Confirmation du mdp" required /></p>
+    </form>
+
+    <script>
+        let passwordnb1 = document.getElementById("passwordnb1");
+        let passwordnb2 = document.getElementById("passwordnb2");
+        idPasswordnb1.addEventListener("focus", firstFocus);
+        idPasswordnb2.addEventListener("focus", lastFocus);
+        idPasswordnb1.addEventListener("focusout", loseFocus);
+        idPasswordnb1.addEventListener("focusout", loseFocus);
+
+        function focus() {
+            passwordnb1.style.border = "4px solid black";
+        }
+
+        function focus2() {
+            passwordnb2.style.border = "4px solid black";
+        }
+
+        function blur() {
+            passwordnb1.style.border = "";
+            passwordnb2.style.border = "";
+        }
+    </script>
+</body>
+
+</html>

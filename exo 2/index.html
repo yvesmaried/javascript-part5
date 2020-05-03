@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>exo 2</title>
+</head>
+
+<body>
+    <h1>Exercice 2</h1>
+    <p>Refaire le premier exercice mais en utilisant des classes préparées en css.</p>
+
+    <form action="">
+        <p><label for="passwordnb1">Mot de passe :</label>
+            <input type="password" id="passwordnb1" name="pass" placeholder="Votre mot de passe" required /></p>
+        <p><label for="passwordnb2">Confirmation mot de passe :</label>
+            <input type="password" id="passwordnb2" name="confirm_pass" placeholder="Confirmation du mdp"
+                required /></p>
+        <button type="button" onclick="checkPw()">valider</button>
+    </form>
+
+
+
+    <script>
+        function checkPw() {
+            let passwordnb1 = document.getElementById('passwordnb1')
+            let passwordnb2 = document.getElementById('passwordnb2')
+
+            if (passwordnb1.value == passwordnb2.value) {
+                console.log('good');
+                window.alert('mot de passe bon');
+                passwordnb1.classList.add("mdpt");
+                passwordnb2.classList.add("mdpt");
+                passwordnb1.classList.remove("mdpf");
+                passwordnb2.classList.remove("mdpf");
+            } else {
+                console.log('bad');
+                window.alert("les mots de passes ne correspondent pas")
+                passwordnb1.classList.add("mdpf");
+                passwordnb2.classList.add("mdpf");
+                passwordnb1.classList.remove("mdpt");
+                passwordnb2.classList.remove("mdpt");
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>

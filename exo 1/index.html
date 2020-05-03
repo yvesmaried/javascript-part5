@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo 1</title>
+</head>
+
+<body>
+    <h1>Exercice 1</h1>
+    <p>Créer un formulaire demandant un mot de passe et une confirmation de mot de passe et comportant un bouton.</p>
+    <p>Au clic sur le bouton, si les deux champs sont identiques, les entourer de vert. Sinon les entourer en rouge.</p>
+
+    <form action="">
+        <p><label for="passwordnb1">Mot de passe :</label>
+            <input type="password" id="passwordnb1" name="pass" placeholder="Votre mot de passe" required /></p>
+        <p><label for="passwordnb2">Confirmation mot de passe :</label>
+            <input type="password" id="passwordnb2" name="confirm_pass" placeholder="Confirmation du mdp"
+                required /></p>
+        <button type="button" onclick="checkPw()">valider</button>
+    </form>
+
+
+
+    <script>
+        function checkPw() {
+            let passwordnb1 = document.getElementById('passwordnb1')
+            let passwordnb2 = document.getElementById('passwordnb2')
+
+            if (passwordnb1.value == passwordnb2.value) {
+                console.log('good');
+                window.alert('mot de passe bon')
+                document.getElementById('passwordnb1').style.borderColor = "green";
+                document.getElementById('passwordnb2').style.borderColor = "green";
+            } else {
+                console.log('bad');
+                window.alert("les mots de passes ne correspondent pas")
+                document.getElementById('passwordnb1').style.borderColor = "red";
+                document.getElementById('passwordnb2').style.borderColor = "red ";
+
+            }
+        }
+    </script>
+</body>
+
+</html>
